@@ -26,4 +26,3 @@ for i in range(0,2):
     b[i].pack()
     
 win.mainloop()
-
