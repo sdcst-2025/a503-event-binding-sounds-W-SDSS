@@ -10,19 +10,20 @@ window.attributes("-topmost", True)
 
 p.playsound("dog.mp3")
 
-dog = PhotoImage(file="dog.png")
-dog = PhotoImage(file="")
-dog = PhotoImage(file="")
-dog = PhotoImage(file="")
-dog = PhotoImage(file="")
+dog = tk.PhotoImage(file="dog.png").subsample(20,20)
+cat = tk.PhotoImage(file="cat.png").subsample(20,20)
+chicken = tk.PhotoImage(file="chicken.png").subsample(20,20)
+hourse = tk.PhotoImage(file="hourse.png").subsample(20,20)
 
-b1=tk.Button(window, text="dog", image=dog)
-b2=tk.Button(window, text="")
-b3=tk.Button(window, text="")
-b4=tk.Button(window, text="")
-b5=tk.Button(window, text="")
+b1=tk.Button(window, text="Dog", image=dog, compound="top")
+b2=tk.Button(window, text="Cat", image=cat, compound="top")
+b3=tk.Button(window, text="Chicken", image=chicken, compound="top")
+b4=tk.Button(window, text="Hourse", image=hourse, compound="top")
 
 
-b1.place(x=10,y=10, width=100, height=100)
+b1.grid(row=0, column=0)
+b2.grid(row=0, column=1)
+b3.grid(row=1, column=0)
+b4.grid(row=1, column=1)
 
 window.mainloop()
