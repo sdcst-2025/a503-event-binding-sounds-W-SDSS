@@ -5,25 +5,33 @@ import playsound as p
 
 window = tk.Tk()
 window.title("soundboard")
-window.geometry("500x500")
+window.geometry("350x300")
 window.attributes("-topmost", True)
 
-p.playsound("dog.mp3")
+def dog():
+    p.playsound("dog.mp3")
 
-dog = tk.PhotoImage(file="dog.png").subsample(20,20)
-cat = tk.PhotoImage(file="cat.png").subsample(20,20)
-chicken = tk.PhotoImage(file="chicken.png").subsample(20,20)
-hourse = tk.PhotoImage(file="hourse.png").subsample(20,20)
+#
+dog = tk.PhotoImage(file="dog.png").subsample(5,5)
+cat = tk.PhotoImage(file="cat.png").subsample(5,5)
+chicken = tk.PhotoImage(file="chicken.png").subsample(5,5)
+hourse = tk.PhotoImage(file="hourse.png").subsample(5,5)
+pig = tk.PhotoImage(file="hourse.png").subsample(5,5)
+cow = tk.PhotoImage(file="hourse.png").subsample(5,5)
 
-b1=tk.Button(window, text="Dog", image=dog, compound="top")
-b2=tk.Button(window, text="Cat", image=cat, compound="top")
-b3=tk.Button(window, text="Chicken", image=chicken, compound="top")
-b4=tk.Button(window, text="Hourse", image=hourse, compound="top")
+b1=tk.Button(window, text="Dog", image=dog, compound="top", width=100, height=100, command="dog")
+b2=tk.Button(window, text="Cat", image=cat, compound="top", width=100, height=100)
+b3=tk.Button(window, text="Chicken", image=chicken, compound="top", width=100, height=100)
+b4=tk.Button(window, text="Hourse", image=hourse, compound="top", width=100, height=100)
+b5=tk.Button(window, text="Pig", image=pig, compound="top", width=100, height=100)
+b6=tk.Button(window, text="Cow", image=cow, compound="top", width=100, height=100)
 
-
-b1.grid(row=0, column=0)
-b2.grid(row=0, column=1)
-b3.grid(row=1, column=0)
-b4.grid(row=1, column=1)
+b1.place(x=10, y=10)
+b2.place(x=120, y=10)
+b3.place(x=230, y=10)
+b4.place(x=10, y=120)
+b5.place(x=120, y=120)
+b6.place(x=230, y=120)
+#
 
 window.mainloop()
